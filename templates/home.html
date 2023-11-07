@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container" >
+    <table class="table" border='2px solid' >
+        <h3>Teacher</h3>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">Experience</th>
+            <th scope="col">City</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in teachers %}
+            <tr>
+                {% comment %} <th scope="row">1</th> {% endcomment %}
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.password}}</td>
+                <td>{{i.Qualification}}</td>
+                <td>{{i.Experience}}</td>
+                <td>{{i.city}}</td>
+    
+              </tr>
+            
+            {% endfor %}
+        </tbody>
+      </table>
+   </div>
+
+
+    <div class="container">
+        <table class="table " border='2px solid'>
+            <h3>Student</h3>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col"> Class</th>
+                <th scope="col">Total_marks</th>
+                <th scope="col"> Obtain_marks</th>
+                <th scope="col">Board</th>
+    
+              </tr>
+            </thead>
+            <tbody>
+                {% for j in students %}
+                <tr>
+                    {% comment %} <th scope="row">1</th> {% endcomment %}
+                    <td>{{j.name}}</td>
+                    <td>{{j.email}}</td>
+                    <td>{{j.password}}</td>
+                    <td>{{j.Class}}</td>
+                    <td>{{j.Total_marks}}</td>
+                    <td>{{j.Obtain_marks}}</td>
+                    <td>{{j.Board}}</td>
+                  </tr>
+                
+                {% endfor %}
+            </tbody>
+          </table>
+        
+    
+
+
+    </div>
+     
+
+
+
+
+
+
+</body>
+</html>
